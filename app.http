@@ -1,0 +1,54 @@
+###
+POST http://localhost:4000/vendor/register
+Content-Type: application/json
+
+{
+    "username":"madhu",
+    "email":"madhu@gmail.com",
+    "password":"madhu12"
+}
+
+###
+POST http://localhost:4000/vendor/login
+Content-Type: application/json
+
+{
+    "email":"madhu@gmail.com",
+    "password":"madhu12"
+}
+
+###
+POST http://localhost:4000/firm/add-firm 
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZW5kb3JJZCI6IjY2ZWUzNGU5ZTA1NTI5MTMyZjQxMGU3ZSIsImlhdCI6MTcyNjg4NzE3MiwiZXhwIjoxNzI2ODkwNzcyfQ.ckPd_gAjX_xnjj6N0vP7zErrPeEB7p0-OTc_DMEUOgE
+
+{   "firmName":"Madhu Restuarant",
+    "area":"Biccavolu",
+    "category":["veg","non-veg"],
+    "region":["south-indian","north-indian","chinese"],
+    "offer":"50% off",
+    "image":"madhu.jpg"
+
+}
+
+
+###
+POST http://localhost:4000/product/add-product/66ee353ae05529132f410e83
+Content-Type: application/json
+
+{
+  "productName": "Manchuria",
+  "price": "50",
+  "category": ["veg"],
+  "bestSeller": true,
+  "description": "Yummy Manchuria"
+}
+
+###
+GET http://localhost:4000/vendor/all-vendors
+
+###
+GET http://localhost:4000/vendor/single-vendor/66ee34e9e05529132f410e7e
+
+###
+GET http://localhost:4000/product/66ee353ae05529132f410e83/products
